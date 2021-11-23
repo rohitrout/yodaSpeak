@@ -12,9 +12,9 @@ function constructURL(text)
 
 }
 
-function doFetch(text)
+function doFetch(error)
 {
-    
+    alert("Something went wrong with the server!")
 }
 
 function clickEventHandler()
@@ -27,7 +27,8 @@ function clickEventHandler()
         var translatedText=json.contents.translated;
         txtOutput.innerText=translatedText;
     })
-}
+    .catch(doFetch)
+};
 
 
 
